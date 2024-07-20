@@ -1,0 +1,32 @@
+create table student(rollno number(5) primary key,name varchar(20),age number(20),bname barchar(5),perc number(5,2));
+       
+insert into student values(520,'HARI',18,'CSE',76.5);
+insert into student values(420,'ANIL',19,'ECE',66.8);
+insert into student values(304,'KUMAR',18,'MECH',69.5);
+insert into student values(550,'RAJU',19,'CSE',65);
+insert into student values(1240,'ANIL',18,'IT',68.5);
+
+select * from student;
+
+insert into student values(555,'REDDY',18,'CSE',60.5);
+delete from student where rollno=550;
+update student set perc=70 where rollno=420;
+
+select name from student where perc>=90 and bname='CSE';
+
+select * from student where age between 18 and 20;
+
+alter table student add email varchar(20);
+
+update student set email='kumar@gmail.com' where rollno=304;
+
+select * from student;
+
+alter table student drop column email;
+
+
+update student set bname='CSE' where rollno=304;
+
+alter table student drop column bname;
+
+select * from student;
